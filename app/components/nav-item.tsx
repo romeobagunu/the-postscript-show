@@ -7,7 +7,7 @@ export interface NavItemDetails {
 
 export function NavItem({ label, route }: NavItemDetails) {
     return (
-        <Link href={route} className="h-full mx-2 p-2 uppercase">
+        <Link href={route} className="h-full mx-2 p-2">
             {label}
         </Link>
     )
