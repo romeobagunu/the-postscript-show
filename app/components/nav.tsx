@@ -41,8 +41,8 @@ export function Navbar() {
                     </Link>
                 </div>
                 <ul className="flex items-center">
-                    {navItems.map((navItem) => (
-                        <li>
+                    {navItems.map((navItem, index) => (
+                        <li key={index}>
                             <NavItem
                                 label={navItem.label}
                                 route={navItem.route}
