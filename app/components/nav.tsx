@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Logo } from "./logo";
 import { NavItem } from "./nav-item";
 
+import { SiSpotify, SiYoutube, SiApplepodcasts } from "react-icons/si"
+
 const navItems = [
     {
         label: 'About',
@@ -11,21 +13,6 @@ const navItems = [
         label: 'Episodes',
         route: '/'
     }
-]
-
-const actionItems = [
-    {
-        label: 'Search',
-        route: '/'
-    },
-    {
-        label: 'Watch on YouTube',
-        route: '/'
-    },
-    {
-        label: 'Listen on Spotify',
-        route: '/'
-    },
 ]
 
 export function Navbar() {
@@ -51,16 +38,23 @@ export function Navbar() {
                     ))}
                 </ul>
             </div>
-            <div className="flex items-center">
-                <ul className="flex items-center">
-                    {actionItems.map((actionItem, index) => (
-                        <li key={index} >
-                            <NavItem
-                                label={actionItem.label}
-                                route={actionItem.route}
-                            ></NavItem>
-                        </li>
-                    ))}
+            <div className="flex items-center mr-6">
+                <ul className="flex items-center gap-4">
+                    <li key="spotify">
+                        <a href="https://open.spotify.com/show/3sWcPlzlLIZQhjTOnwELpo" target="_blank">
+                            <SiSpotify size={24} className="text-green-500"/>
+                        </a>
+                    </li>
+                    <li key="youtube">
+                        <a href="https://www.youtube.com/@thepostscriptshow" target="_blank">
+                            <SiYoutube size={24} className="text-red-500" />
+                        </a>
+                    </li>
+                    <li key="apple-podcasts">
+                        <a href="https://podcasts.apple.com/us/podcast/the-postscript-show/id1478792983" target="_blank">
+                            <SiApplepodcasts size={24} className="text-purple-500" />
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
