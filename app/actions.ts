@@ -2,12 +2,16 @@
 
 import { X2jOptions, XMLParser } from "fast-xml-parser";
 
-interface RSSFeedItem {
+export interface RSSFeedItem {
     title: string;
     description: string;
     date: Date;
     image: string;
     episode: number;
+    pubDate: Date;
+    length: number;
+    mp3: string;
+    link: string;
 }
 
 export async function getEpisodes(): Promise<RSSFeedItem[]> {
@@ -31,6 +35,10 @@ export async function getEpisodes(): Promise<RSSFeedItem[]> {
         date: i.pubDate,
         image: i.itunes_image.href,
         episode: i.itunes_episode,
+        pubDate: new Date(i.pubDate),
+        length: i.itunes_duration,
+        mp3: i.enclosure.url,
+        link: i.link,
     }));
 
     return mapped;
