@@ -1,0 +1,10 @@
+.descriptionContainer {
+    p:first-child {
+        line-height: 1.35;
+        max-height: calc(1.35 * 1rem * 3);
+        overflow: hidden;
+    }
+    p:first-child ~ p {
+        display: none;
+    }
+}
