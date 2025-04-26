@@ -33,8 +33,8 @@ export default function RootLayout({
         <main className="container mx-auto px-5">
           {children}
         </main>
-        <footer>
-          <p className="text-center">© Copyright {new Date().getFullYear()}</p>
+        <footer className="bg-gray-300 h-32 text-center pt-8 pb-4 text-gray-600">
+          <p>© {new Date().getFullYear()}</p>
         </footer>
       </body>
     </html>
