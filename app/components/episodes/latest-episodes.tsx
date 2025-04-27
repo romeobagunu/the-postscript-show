@@ -17,8 +17,8 @@ export function LatestEpisodes() {
     const toMinutes = (lengthInSeconds: number): string => `${Math.floor(lengthInSeconds / 60).toString()} MIN`
 
     return (
-        <div className="max-w-232">
-            <h2 className="text-center text-xl uppercase text-bold text-gray-700">Latest Episodes</h2>
+        <div className="max-w-220">
+            <h2 className="text-center text-xl uppercase text-gray-700">Latest Episodes</h2>
             <ol className="flex-col align-middle justify-center">
                 {render.map(e => (
                     <li key={e.episode}
