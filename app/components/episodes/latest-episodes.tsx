@@ -50,7 +50,7 @@ export function LatestEpisodes() {
                             </a>
                             <div
                                 dangerouslySetInnerHTML={{ __html: e.description}}
-                                className={styles.descriptionContainer + ' overflow-hidden max-h-24 text-gray-500'}
+                                className={styles.descriptionContainer + ' overflow-hidden max-h-24'}
                             ></div>
                             <a className="w-fit text-sky-400 hover:underline" href={e.link}>View more...</a>
                         </div>
