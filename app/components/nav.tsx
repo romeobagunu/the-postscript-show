@@ -27,7 +27,7 @@ export function Navbar() {
                         <Logo />
                     </Link>
                 </div>
-                <ul className="flex items-center">
+                {/* <ul className="flex items-center">
                     {navItems.map((navItem, index) => (
                         <li key={index}>
                             <NavItem
@@ -36,7 +36,7 @@ export function Navbar() {
                             ></NavItem>
                         </li>
                     ))}
-                </ul>
+                </ul> */}
             </div>
             <ul className="flex gap-4">
                 <li key="spotify">
