@@ -43,7 +43,7 @@ export function EpisodeList({episodes}: {episodes: RSSFeedItem[]}) {
                                 <p>{toMinutes(e.length)}</p>
                             </div>
                             <a href={e.link}>
-                                <h3 className="uppercase hover:underline text-2xl">{e.title}</h3>
+                                <h3 className="font-condensed uppercase hover:underline text-2xl">{e.title}</h3>
                             </a>
                             <div
                                 dangerouslySetInnerHTML={{ __html: e.description}}

@@ -7,7 +7,7 @@ export function LatestEpisodes() {
 
     return (
         <div className="max-w-220">
-            <h2 className="text-center text-xl uppercase text-gray-700">Latest Episodes</h2>
+            <h2 className="font-condensed text-center text-xl uppercase text-gray-700">Latest Episodes</h2>
             <EpisodeList episodes={episodes} />
         </div>
     )
