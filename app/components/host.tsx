@@ -1,22 +1,34 @@
-import { Headshot } from './headshot';
+import Image from "next/image"
+import brandon from "@/public/brandon.png"
 
 export function Host() {
     return (
-        <div className="shadow mb-4 ounded-2xl max-w-116 p-4 h-36">
-            <div className="flex h-full gap-4 align-middle">
-                <div className="flex items-center">
-                    <Headshot size={24}  />
-                </div>
-                <div className="flex flex-col justify-center">
-                    <div className="flex gap-2 items-center">
-                        <h3 className="text-2xl text-gray-800">Brandon Briscoe</h3>
-                        <span>&middot;</span>
-                        <h4 className="text-xl text-gray-600">Host</h4>
+        <div className="w-full flex flex-col">
+            <div>
+                <div className="w-full aspect-[4/3] relative rounded-2xl overflow-hidden">
+                    <div className="absolute z-10 h-full w-1/3 left-0 bg-gradient-to-r from-amber-200/40 to-transparent"></div>
+                    <div className="absolute z-10 right-0 h-full w-1/2 bg-gradient-to-l from-fuchsia-500/60 to-transparent"></div>
+                    <div className="absolute size-full">
+                        <Image 
+                            src={brandon}
+                            alt="The Postscript host Brandon Briscoe at a desk with a microphone"
+                            layout="fill"
+                            objectFit="cover"
+                            priority
+                        />
                     </div>
-                    <p className="text-gray-500">
-                        Associate Pastor at Midtown Baptist Temple and Provost of Living Faith Bible Institute.
-                    </p>
                 </div>
+            </div>
+            <div className="mt-3 flex gap-2 items-center text-3xl font-condensed">
+                <h3>Brandon Briscoe</h3>
+                <span>&middot;</span>
+                <h4>Host</h4>
+            </div>
+            <div className="text-sm w-full font-serif italic text-gray-400">
+                <ul>
+                    <li>Provost of the Living Faith Bible Institute</li>
+                    <li>Associate Pastor at Midtown Baptist Temple</li>
+                </ul>
             </div>
         </div>
     )
