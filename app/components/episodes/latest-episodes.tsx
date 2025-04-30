@@ -1,17 +1,16 @@
 import { use } from "react";
 import { getEpisodes } from "../../actions";
 import { EpisodeList } from "./episode-list";
-import { FeaturedEpisode } from "./featured-episode";
+import { Category } from "@/app/types/category";
 
-export function LatestEpisodes() {
-    const episodes = use(getEpisodes());
-    const mostRecentEpisode = episodes[0]
-    const nextLatestEpisodes = episodes.slice(1,4)
+export function LatestEpisodes({category, count}: {category: Category, count: number}) {
+    const latestEpisodes = use(getEpisodes(0, count, category));
 
     return (
-        <div className="bg-gray-800">
-            <FeaturedEpisode episode={mostRecentEpisode} />
-            <EpisodeList episodes={nextLatestEpisodes} />
+        <div className="bg-gray-900 grid grid-cols-12 gap-y-10 pb-10">
+            <div className="col-start-2 col-span-10">
+                <EpisodeList episodes={latestEpisodes} />
+            </div>
         </div>
     )
 }

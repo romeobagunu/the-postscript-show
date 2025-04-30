@@ -4,7 +4,7 @@ import { EpisodeListItem } from "./episode-list-item";
 export function EpisodeList({episodes}: {episodes: Episode[]}) {
     
     return (
-        <ol className="grid grid-cols-12 m-8 gap-4">
+        <ol className="grid grid-cols-12 gap-4">
                 {episodes.map(e => (
                     <li key={e.episode}
                         className="col-span-4"

@@ -7,7 +7,7 @@ import styles from './featured-episode.module.css';
 
 export function FeaturedEpisode({ episode }: {episode: Episode}) {
     return (
-            <div className="h-144 grid grid-cols-12 bg-white rounded-2xl m-8">
+            <div className="h-96 grid grid-cols-12 bg-white rounded-2xl content-center">
                 <div className="col-span-4 flex justify-center items-center">
                     <a href={episode.link} className="block h-6/10 aspect-square hover:cursor-pointer hover:brightness-50 rounded-2xl overflow-hidden">
                         <Image
@@ -21,7 +21,7 @@ export function FeaturedEpisode({ episode }: {episode: Episode}) {
                 </div>
                 <div className="col-span-8 flex flex-col justify-center">
                     <div className="py-2 flex gap-2 text-gray-400 uppercase text-xl">
-                        <p>Latest Episode</p>
+                        <p className="text-green-500">Latest Episode</p>
                         <span>&middot;</span>
                         <p>{toAbbreviatedDate(episode.pubDate)}</p>
                         <span>&middot;</span>
@@ -34,14 +34,6 @@ export function FeaturedEpisode({ episode }: {episode: Episode}) {
                         dangerouslySetInnerHTML={{ __html: episode.description}}
                         className={styles.descriptionContainer + " py-2 w-4/5 text-gray-500"}
                     ></div>
-                    <div className="my-2">
-                        <a 
-                            href={episode.link}
-                            className="py-1 px-4 bg-fuchsia-500 text-white rounded-xl w-24 text-center"
-                        >
-                            Listen Now
-                        </a>
-                    </div>
                 </div>
             </div>
     )
