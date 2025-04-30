@@ -7,7 +7,7 @@ import styles from './featured-episode.module.css';
 
 export function FeaturedEpisode({ episode }: {episode: Episode}) {
     return (
-            <div className="grid grid-cols-12 bg-white rounded-2xl m-8">
+            <div className="h-144 grid grid-cols-12 bg-white rounded-2xl m-8">
                 <div className="col-span-4 flex justify-center items-center">
                     <a href={episode.link} className="block h-6/10 aspect-square hover:cursor-pointer hover:brightness-50 rounded-2xl overflow-hidden">
                         <Image
