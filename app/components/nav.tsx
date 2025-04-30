@@ -17,7 +17,7 @@ const navItems = [
 
 export function Navbar() {
     return (
-        <nav className="container mx-auto max-w-9/12 h-24 flex items-center justify-between p-2">
+        <nav className="fixed bg-transparent container mx-auto max-w-9/12 h-24 flex items-center justify-between p-2">
             <div className="h-full flex items-center">
                 <div className="h-full mx-6">
                     <Link

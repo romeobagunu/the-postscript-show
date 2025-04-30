@@ -7,7 +7,7 @@ export function Logo() {
             <Image 
                 src={logo} 
                 alt="The Postscript Show logo"
-                className="h-full w-auto"
+                className="h-full w-auto opacity-70"
             />
     )
 }
