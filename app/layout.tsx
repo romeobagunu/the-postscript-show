@@ -35,7 +35,7 @@ export default function RootLayout({
         className={`${merriweather.variable} ${bebasNeue.variable} ${baskerville.variable}`}
       >
         <Navbar />
-        <main className="flex flex-col align-middle">
+        <main className="bg-gray-900">
           {children}
         </main>
         <footer className="bg-gray-300 h-32 text-center pt-8 pb-4 text-gray-600">
