@@ -7,7 +7,8 @@ import { LatestEpisodesSkeleton } from "./components/episodes/latest-episodes.sk
 export default function Home() {
   return (
     <>
-        <Hero />
+      <Hero />
+      <About />
       <Suspense fallback={<LatestEpisodesSkeleton />}>
         <LatestEpisodes />
       </Suspense>
