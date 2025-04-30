@@ -1,0 +1,14 @@
+.descriptionContainer {
+    --description-line-height: 1.35;
+    --description-font-size: 1rem;
+    --description-lines: 6;
+    max-height: calc(var(--description-line-height) * var(--description-font-size) * var(--description-lines));
+    overflow: hidden;
+
+    p:first-child ~ p {
+        display: none;
+    }
+    br {
+        display: none;
+    }
+}

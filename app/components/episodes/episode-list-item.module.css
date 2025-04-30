@@ -1,7 +1,7 @@
 .descriptionContainer {
     p:first-child {
         line-height: 1.35;
-        max-height: calc(1.35 * 1rem * 3);
+        max-height: calc(1.35 * 1rem * 2);
         overflow: hidden;
 
         color: #0000;
