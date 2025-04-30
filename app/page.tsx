@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { LatestEpisodes } from "./components/episodes/latest-episodes";
-import { Hero } from "./components/hero";
+import { Hero } from "./components/hero/hero";
 import { Host } from "./components/host";
 import { LatestEpisodesSkeleton } from "./components/episodes/latest-episodes.skeleton";
 
