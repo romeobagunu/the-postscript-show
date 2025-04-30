@@ -1,3 +1,5 @@
+import { Category } from "./category";
+
 export interface Episode {
     title: string;
     description: string;
@@ -8,4 +10,5 @@ export interface Episode {
     length: number;
     mp3: string;
     link: string;
+    category: Category;
 }
