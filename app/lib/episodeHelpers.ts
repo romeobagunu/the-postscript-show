@@ -3,7 +3,7 @@ const abbreviatedMonths: string[] = [
     'JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'
 ]
 export function toAbbreviatedMonth(date: Date): string { 
-    return abbreviatedMonths[date.getMonth() - 1];
+    return abbreviatedMonths[date.getMonth()];
 }
 
 export function toAbbreviatedDate(date: Date): string {
