@@ -7,14 +7,10 @@ import { LatestEpisodesSkeleton } from "./components/episodes/latest-episodes.sk
 export default function Home() {
   return (
     <>
-      <div className="h-[66vh] w-full">
         <Hero />
-      </div>
-      <div className="h-[66vh] w-full">
-          <Suspense fallback={<LatestEpisodesSkeleton />}>
-            <LatestEpisodes />
-          </Suspense>
-      </div>
+      <Suspense fallback={<LatestEpisodesSkeleton />}>
+        <LatestEpisodes />
+      </Suspense>
       <div className="container grid grid-cols-12">
         <div className="col-span-4">
           <Host />

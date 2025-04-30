@@ -8,7 +8,7 @@ export function Hero() {
     return (<>
             <div 
                 className={styles.gradientBackground + 
-                " size-full flex flex-col items-center justify-center"}
+                " h-[66vh] flex flex-col items-center justify-center"}
             >
                 <div className="size-1/2 relative">
                     <Image 
