@@ -11,6 +11,7 @@
   --font-sans: 'Calibri';
   --font-mono: 'monospace';
   --font-condensed: var(--font-bebas-neue);
+  --font-serif: var(--font-baskerville);
 }
 
 @media (prefers-color-scheme: dark) {

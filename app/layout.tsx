@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Merriweather, Bebas_Neue } from "next/font/google";
+import { Merriweather, Bebas_Neue, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./components/nav";
 
@@ -11,6 +11,11 @@ const merriweather = Merriweather({
 
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
+  weight: "400"
+})
+
+const baskerville = Libre_Baskerville({
+  variable: "--font-baskerville",
   weight: "400"
 })
 
@@ -27,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body 
-        className={`${merriweather.variable} ${bebasNeue.variable}`}
+        className={`${merriweather.variable} ${bebasNeue.variable} ${baskerville.variable}`}
       >
         <Navbar />
         <main className="flex flex-col align-middle">
