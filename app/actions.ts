@@ -2,19 +2,9 @@
 
 import { X2jOptions, XMLParser } from "fast-xml-parser";
 
-export interface RSSFeedItem {
-    title: string;
-    description: string;
-    date: Date;
-    image: string;
-    episode: number;
-    pubDate: Date;
-    length: number;
-    mp3: string;
-    link: string;
-}
+import { Episode } from "./types/episode";
 
-export async function getEpisodes(): Promise<RSSFeedItem[]> {
+export async function getEpisodes(page: number = 0, pageSize: number = 10): Promise<Episode[]> {
     const res = await fetch("https://feeds.transistor.fm/the-postscript-show");
     const xml = await res.text();
 
@@ -29,7 +19,12 @@ export async function getEpisodes(): Promise<RSSFeedItem[]> {
     const parser = new XMLParser(options);
     const parsed = parser.parse(xml);
 
-    const mapped = parsed.rss.channel.item.map((i: any) => ({
+    const items = parsed.rss.channel.item.slice(
+        0, 
+        pageSize - 1
+    );
+
+    const mapped = items.map((i: any) => ({
         title: i.title,
         description: i.description,
         date: i.pubDate,
