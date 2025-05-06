@@ -7,8 +7,8 @@ export function Headshot({size = 36}) {
             <Image 
                 src={headshot}
                 alt="A headshot of Brandon Briscoe, host of The Postscript Show"
-                layout="fill"
-                objectFit="cover"
+                fill
+                className="object-cover"
             />
         </div>
     )

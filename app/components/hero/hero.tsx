@@ -14,8 +14,8 @@ export function Hero() {
                     <Image 
                         src={logoWhite}
                         alt="The Postscript"
-                        layout="fill"
-                        objectFit='contain'
+                        fill
+                        style={{ objectFit: "contain" }}
                     />
                 </div>
             </div>

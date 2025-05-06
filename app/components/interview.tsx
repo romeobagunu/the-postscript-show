@@ -9,10 +9,9 @@ export function Interview() {
                     src={interview}
                     alt="An interview from the Postscript"
                     fill
-                    objectFit='cover'
-                    objectPosition='0% 15%'
                     priority
                     className="brightness-115"
+                    style={{ objectFit: "cover", objectPosition: "0% 15%" }}
                 />
             </div>
             <div className="absolute top-0 h-1/3 w-full bg-gradient-to-b from-amber-200/40 to-transparent"></div>

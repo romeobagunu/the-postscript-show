@@ -12,8 +12,8 @@ export function Host() {
                         <Image 
                             src={brandon}
                             alt="The Postscript host Brandon Briscoe at a desk with a microphone"
-                            layout="fill"
-                            objectFit="cover"
+                            fill
+                            style={{ objectFit: "cover" }}
                             priority
                         />
                     </div>
