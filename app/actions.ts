@@ -7,7 +7,7 @@ import { Category } from "./types/category";
 
 export async function getEpisodes(page: number = 0, pageSize: number = 10, category: Category | null = null): Promise<Episode[]> {
 
-    const res = await fetch("https://feeds.transistor.fm/the-postscript-show");
+    const res = await fetch("https://feeds.transistor.fm/the-postscript-show", { next: { revalidate: 3600 } });
     const xml = await res.text();
 
     const options: X2jOptions = {
