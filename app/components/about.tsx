@@ -3,7 +3,7 @@ import { SiSpotify, SiYoutube } from "react-icons/si"
 
 export function About() {
     return (
-        <div className="h-172 bg-gray-900 grid grid-cols-12">
+        <div className="h-[100vh] bg-gray-900 grid grid-cols-12">
             <div className="col-start-2 col-span-3 h-full flex flex-col gap-8 justify-center text-white ">
                     <h1 className="font-serif text-3xl">
                         <span className="italic">The Postscript</span> is a podcast and YouTube series that invites listeners into 
